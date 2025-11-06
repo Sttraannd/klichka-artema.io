@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы Артема в уколе</title>
+    <title>Клички Артёма в школе</title>
     <style>
         :root {
             --primary: #667eea;
@@ -12,226 +12,130 @@
             --light: rgba(255, 255, 255, 0.2);
             --text: white;
         }
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 20px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: var(--text);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
+            display: flex; justify-content: center; align-items: flex-start;
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(12px);
             border-radius: 20px;
             padding: 30px;
-            max-width: 800px;
-            width: 100%;
+            max-width: 800px; width: 100%;
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+        .header { text-align: center; margin-bottom: 25px; }
         .header h1 {
-            font-size: 2.3em;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            font-size: 2.3em; margin: 0;
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; flex-wrap: wrap;
         }
         .cap {
-            font-size: 1.6em;
-            background: #ffd700;
-            color: #333;
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 1.6em; background: #ffd700; color: #333;
+            border-radius: 50%; width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
         }
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
+        .stats { display: flex; justify-content: space-around; margin-bottom: 25px; flex-wrap: wrap; }
         .stat {
-            background: var(--light);
-            border-radius: 15px;
-            padding: 16px;
-            text-align: center;
-            flex: 1;
-            min-width: 100px;
-            margin: 8px;
+            background: var(--light); border-radius: 15px;
+            padding: 16px; text-align: center; flex: 1;
+            min-width: 100px; margin: 8px;
         }
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-        }
-        .stat-label {
-            font-size: 0.85em;
-            opacity: 0.8;
-        }
-        .actions {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
+        .stat-number { font-size: 2em; font-weight: bold; }
+        .stat-label { font-size: 0.85em; opacity: 0.8; }
+        .actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
         .action-btn {
-            background: var(--light);
-            border: none;
-            border-radius: 15px;
-            padding: 14px 20px;
-            color: white;
-            font-size: 1em;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            background: var(--light); border: none; border-radius: 15px;
+            padding: 14px 20px; color: white; font-size: 1em;
+            cursor: pointer; display: flex; align-items: center; gap: 8px;
             transition: 0.3s;
         }
-        .action-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-        .form-section {
-            background: var(--light);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-        }
-        .form-section h2 {
-            margin: 0 0 20px 0;
-            text-align: center;
-            font-size: 1.6em;
-        }
-        .form-group {
-            margin-bottom: 16px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            opacity: 0.9;
-            font-size: 0.95em;
-        }
+        .action-btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+        .form-section { background: var(--light); border-radius: 15px; padding: 25px; margin-bottom: 25px; }
+        .form-section h2 { margin: 0 0 20px 0; text-align: center; font-size: 1.6em; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; margin-bottom: 6px; opacity: 0.9; font-size: 0.95em; }
         .form-group input {
-            width: 100%;
-            padding: 12px 14px;
-            border: none;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            font-size: 1em;
-            color: #333;
+            width: 100%; padding: 12px 14px; border: none; border-radius: 10px;
+            background: rgba(255,255,255,0.9); font-size: 1em; color: #333;
         }
         .submit-btn {
-            width: 100%;
-            padding: 14px;
+            width: 100%; padding: 14px;
             background: linear-gradient(135deg, var(--accent), #ee5a24);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-weight: bold;
-            transition: 0.3s;
+            color: white; border: none; border-radius: 10px;
+            font-size: 1.1em; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            font-weight: bold; transition: 0.3s;
         }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,107,0.4); }
+        .nicknames-list { margin-top: 20px; }
+        .nickname-item {
+            background: rgba(255,255,255,0.15); border-radius: 12px;
+            padding: 14px; margin-bottom: 12px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 10px;
         }
-        .courses-list {
-            margin-top: 20px;
-        }
-        .course-item {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 14px;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .course-info {
-            flex: 1;
-            min-width: 150px;
-        }
-        .course-name {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .course-author {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
+        .nickname-info { flex: 1; min-width: 150px; }
+        .nickname-text { font-weight: bold; font-size: 1.1em; }
+        .nickname-author { font-size: 0.9em; opacity: 0.8; }
         .like-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.3em;
+            background: rgba(255,255,255,0.2); border: none;
+            border-radius: 50%; width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; font-size: 1.3em; transition: 0.3s;
+        }
+        .like-btn.liked { background: #ff6b6b; color: white; }
+        .like-btn:hover { transform: scale(1.1); }
+        .likes-count { margin-left: 8px; font-weight: bold; }
+        .empty-state { text-align: center; padding: 30px; opacity: 0.7; font-style: italic; }
+        .modal {
+            display: none; position: fixed; z-index: 1000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); justify-content: center; align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: white; color: #333; border-radius: 16px;
+            padding: 25px; max-width: 600px; width: 100%;
+            max-height: 80vh; overflow-y: auto;
+        }
+        .modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee;
+        }
+        .modal-header h2 { margin: 0; font-size: 1.5em; }
+        .close { font-size: 1.8em; cursor: pointer; color: #aaa; }
+        .close:hover { color: #000; }
+        .modal-nicknames { display: flex; flex-direction: column; gap: 12px; }
+        .modal-nickname {
+            background: #f8f9fa; padding: 12px; border-radius: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .modal-nickname-info { flex: 1; min-width: 150px; }
+        .modal-nickname-text { font-weight: 600; }
+        .modal-nickname-author { font-size: 0.9em; color: #666; }
+        .modal-like-btn {
+            background: #e9ecef; border: none; border-radius: 50%;
+            width: 36px; height: 36px; display: flex; align-items: center;
+            justify-content: center; cursor: pointer; font-size: 1.2em;
             transition: 0.3s;
         }
-        .like-btn.liked {
-            background: #ff6b6b;
-            color: white;
-        }
-        .like-btn:hover {
-            transform: scale(1.1);
-        }
-        .likes-count {
-            margin-left: 8px;
-            font-weight: bold;
-        }
-        .empty-state {
-            text-align: center;
-            padding: 30px;
-            opacity: 0.7;
-            font-style: italic;
-        }
+        .modal-like-btn.liked { background: #ff6b6b; color: white; }
+        .modal-like-btn:hover { transform: scale(1.1); }
+        .modal-likes-count { margin-left: 6px; font-weight: bold; color: #ff6b6b; }
         @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            .stats, .actions {
-                flex-direction: column;
-                align-items: center;
-            }
-            .stat, .action-btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            .course-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .course-info {
-                width: 100%;
-            }
+            .header h1 { font-size: 1.8em; }
+            .stats, .actions { flex-direction: column; align-items: center; }
+            .stat, .action-btn { width: 100%; max-width: 300px; }
+            .nickname-item, .modal-nickname { flex-direction: column; align-items: flex-start; }
+            .nickname-info, .modal-nickname-info { width: 100%; }
         }
     </style>
 </head>
@@ -240,134 +144,190 @@
         <div class="header">
             <h1>
                 <span class="cap">🎓</span>
-                Курсы Артема в уколе 😊
+                Клички Артёма в школе 😊
             </h1>
-            <p>Подбери свой курс и построй карьеру, что прыгнет ввысь!</p>
+            <p>Добавь свою кличку или посмотри, что придумали другие!</p>
         </div>
 
         <div class="stats">
             <div class="stat">
-                <div class="stat-number" id="total-courses">0</div>
-                <div class="stat-label">ВСЕГО КУРСОВ</div>
+                <div class="stat-number" id="total-nicknames">0</div>
+                <div class="stat-label">ВСЕГО КЛИЧЕК</div>
             </div>
             <div class="stat">
                 <div class="stat-number" id="total-likes">0</div>
                 <div class="stat-label">ЛАЙКОВ</div>
             </div>
             <div class="stat">
-                <div class="stat-number" id="top-course">-</div>
-                <div class="stat-label">ТОП КУРС</div>
+                <div class="stat-number" id="top-nickname">-</div>
+                <div class="stat-label">ТОП КЛИЧКА</div>
             </div>
         </div>
 
         <div class="actions">
-            <button class="action-btn" onclick="document.getElementById('course-input').focus()">
-                Добавить курс
+            <button class="action-btn" id="add-nickname-btn">
+                🚀 Добавить кличку
             </button>
-            <button class="action-btn" onclick="alert('Пока нет курсов 😅')">
-                Все курсы
+            <button class="action-btn" id="view-all-btn">
+                📋 Все клички
             </button>
         </div>
 
-        <div class="form-section">
-            <h2>Прыгни в курс для Арта!</h2>
-            <form id="course-form">
+        <div class="form-section" id="form-section" style="display: none;">
+            <h2>Придумай кличку для Артёма!</h2>
+            <form id="nickname-form">
                 <div class="form-group">
-                    <label>Курса</label>
-                    <input type="text" id="course-input" placeholder="Например: Арт-Арт" required>
+                    <label>Кличка</label>
+                    <input type="text" id="nickname-input" placeholder="Например: Артём-Шарик" required>
                 </div>
                 <div class="form-group">
                     <label>Твой ник</label>
                     <input type="text" id="author-input" placeholder="Как тебя зовут?" required>
                 </div>
                 <button type="submit" class="submit-btn">
-                    Добавить курс
+                    Добавить кличку 🚀
                 </button>
             </form>
         </div>
 
-        <div class="courses-list" id="courses-list">
-            <div class="empty-state">Пока нет ни одного курса... Добавь первый!</div>
+        <div class="nicknames-list" id="nicknames-list">
+            <div class="empty-state">Пока нет ни одной клички... Добавь первую!</div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Все клички Артёма</h2>
+                <span class="close">×</span>
+            </div>
+            <div id="modal-nicknames" class="modal-nicknames">
+                <!-- Клички будут сюда -->
+            </div>
         </div>
     </div>
 
     <script>
-        const form = document.getElementById('course-form');
-        const courseInput = document.getElementById('course-input');
+        const formSection = document.getElementById('form-section');
+        const addBtn = document.getElementById('add-nickname-btn');
+        const form = document.getElementById('nickname-form');
+        const nicknameInput = document.getElementById('nickname-input');
         const authorInput = document.getElementById('author-input');
-        const coursesList = document.getElementById('courses-list');
-        const totalCoursesEl = document.getElementById('total-courses');
-        const totalLikesEl = document.getElementById('total-likes');
-        const topCourseEl = document.getElementById('top-course');
+        const list = document.getElementById('nicknames-list');
+        const totalNicknames = document.getElementById('total-nicknames');
+        const totalLikes = document.getElementById('total-likes');
+        const topNickname = document.getElementById('top-nickname');
+        const modal = document.getElementById('modal');
+        const modalNicknames = document.getElementById('modal-nicknames');
+        const closeBtn = document.querySelector('.close');
+        const viewAllBtn = document.getElementById('view-all-btn');
 
-        let courses = JSON.parse(localStorage.getItem('artem-courses')) || [];
+        let nicknames = JSON.parse(localStorage.getItem('artem-nicknames')) || [];
 
-        function saveCourses() {
-            localStorage.setItem('artem-courses', JSON.stringify(courses));
-            renderCourses();
+        function save() {
+            localStorage.setItem('artem-nicknames', JSON.stringify(nicknames));
+            render();
+            renderModal();
             updateStats();
         }
 
         function updateStats() {
-            const total = courses.length;
-            const likes = courses.reduce((sum, c) => sum + c.likes, 0);
-            const top = courses.reduce((prev, curr) => 
-                (!prev || curr.likes > prev.likes) ? curr : prev, null);
+            const total = nicknames.length;
+            const likes = nicknames.reduce((s, n) => s + n.likes, 0);
+            const top = nicknames.reduce((p, c) => (!p || c.likes > p.likes) ? c : p, null);
 
-            totalCoursesEl.textContent = total;
-            totalLikesEl.textContent = likes;
-            topCourseEl.textContent = top ? top.name : '-';
+            totalNicknames.textContent = total;
+            totalLikes.textContent = likes;
+            topNickname.textContent = top ? top.text : '-';
         }
 
-        function renderCourses() {
-            if (courses.length === 0) {
-                coursesList.innerHTML = '<div class="empty-state">Пока нет ни одного курса... Добавь первый!</div>';
+        function render() {
+            if (!nicknames.length) {
+                list.innerHTML = '<div class="empty-state">Пока нет ни одной клички... Добавь первую!</div>';
                 return;
             }
-
-            coursesList.innerHTML = courses.map((course, index) => `
-                <div class="course-item">
-                    <div class="course-info">
-                        <div class="course-name">${course.name}</div>
-                        <div class="course-author">от ${course.author}</div>
+            list.innerHTML = nicknames.map((n, i) => `
+                <div class="nickname-item">
+                    <div class="nickname-info">
+                        <div class="nickname-text">${n.text}</div>
+                        <div class="nickname-author">от ${n.author}</div>
                     </div>
-                    <div style="display: flex; align-items: center;">
-                        <button class="like-btn ${course.liked ? 'liked' : ''}" 
-                                onclick="toggleLike(${index})">
-                            ❤️
-                        </button>
-                        <span class="likes-count">${course.likes}</span>
+                    <div style="display:flex;align-items:center;">
+                        <button class="like-btn ${n.liked ? 'liked' : ''}" onclick="toggleLike(${i})">❤️</button>
+                        <span class="likes-count">${n.likes}</span>
                     </div>
                 </div>
             `).join('');
         }
 
-        window.toggleLike = function(index) {
-            courses[index].likes = courses[index].liked ? courses[index].likes - 1 : courses[index].likes + 1;
-            courses[index].liked = !courses[index].liked;
-            saveCourses();
+        function renderModal() {
+            if (!nicknames.length) {
+                modalNicknames.innerHTML = '<p style="text-align:center;color:#999;">Пока нет кличек...</p>';
+                return;
+            }
+            modalNicknames.innerHTML = nicknames.map((n, i) => `
+                <div class="modal-nickname">
+                    <div class="modal-nickname-info">
+                        <div class="modal-nickname-text">${n.text}</div>
+                        <div class="modal-nickname-author">— ${n.author}</div>
+                    </div>
+                    <div style="display:flex;align-items:center;">
+                        <button class="modal-like-btn ${n.liked ? 'liked' : ''}" onclick="toggleLike(${i}); event.stopPropagation();">❤️</button>
+                        <span class="modal-likes-count">${n.likes}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.toggleLike = function(i) {
+            const n = nicknames[i];
+            n.likes = n.liked ? n.likes - 1 : n.likes + 1;
+            n.liked = !n.liked;
+            save();
         };
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = courseInput.value.trim();
-            const author = authorInput.value.trim();
+        // Кнопка "Добавить кличку"
+        addBtn.addEventListener('click', () => {
+            formSection.style.display = formSection.style.display === 'none' ? 'block' : 'none';
+            if (formSection.style.display === 'block') {
+                nicknameInput.focus();
+            }
+        });
 
-            if (name && author) {
-                courses.push({
-                    name,
-                    author,
-                    likes: 0,
-                    liked: false
-                });
-                courseInput.value = '';
+        // Форма
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const text = nicknameInput.value.trim();
+            const author = authorInput.value.trim();
+            if (text && author) {
+                nicknames.push({ text, author, likes: 0, liked: false });
+                nicknameInput.value = '';
                 authorInput.value = '';
-                saveCourses();
+                formSection.style.display = 'none';
+                save();
+            }
+        });
+
+        // Модальное окно
+        viewAllBtn.addEventListener('click', () => {
+            renderModal();
+            modal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
             }
         });
 
         // Инициализация
-        renderCourses();
+        render();
+        renderModal();
         updateStats();
     </script>
 </body>
