@@ -1,1 +1,374 @@
-<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Артём — лучший в мире</title> <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); * { margin:0; padding:0; box-sizing:border-box; } body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; min-height: 100vh; overflow-x: hidden; } .container { max-width: 1100px; margin: 0 auto; padding: 2rem; } header { text-align: center; padding: 4rem 0; } h1 { font-size: 4.5rem; text-shadow: 0 10px 20px rgba(0,0,0,0.4); margin-bottom: 1rem; animation: glow 2s ease-in-out infinite alternate; } @keyframes glow { from { text-shadow: 0 0 20px #fff; } to { text-shadow: 0 0 40px #ff00aa; } } .subtitle { font-size: 1.8rem; opacity: 0.9; } .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 4rem 0; } .card { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.4s; border: 1px solid rgba(255,255,255,0.2); } .card:hover { transform: translateY(-15px) scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.3); } .card h3 { font-size: 1.6rem; margin-bottom: 1rem; } .card p { line-height: 1.6; opacity: 0.9; } .emoji { font-size: 3.5rem; margin-bottom: 1rem; } footer { text-align: center; padding: 3rem 0; font-size: 1.1rem; opacity: 0.8; } .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; } </style> </head> <body> <div class="particles" id="particles"></div> <div class="container"> <header> <h1>АРТЁМ</h1> <p class="subtitle">Король мемов, бог кодинга и просто красивый парень</p> </header> <div class="cards"> <div class="card"> <div class="emoji">🚀</div> <h3>Скорость света</h3> <p>Артём решает баги быстрее, чем ты успеваешь сказать «ой».</p> </div> <div class="card"> <div class="emoji">💻</div> <h3>Код-гуру</h3> <p>Один его pull-request — и весь проект оживает.</p> </div> <div class="card"> <div class="emoji">😂</div> <h3>Мем-лорд</h3> <p>Создаёт мемы, от которых серверы падают от смеха.</p> </div> <div class="card"> <div class="emoji">❤️</div> <h3>Душа компании</h3> <p>Без Артёма вечеринка — просто посиделки.</p> </div> </div> </div> <footer> © 2025 Артём и его фан-клуб. Все права защищены мемами. </footer> <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <script> particlesJS("particles", { "particles": { "number": { "value": 80 }, "color": { "value": "#ffffff" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 }, "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out" } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true } }, "retina_detect": true }); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы Артема в уколе</title>
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #ff6b6b;
+            --light: rgba(255, 255, 255, 0.2);
+            --text: white;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            font-size: 2.3em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .cap {
+            font-size: 1.6em;
+            background: #ffd700;
+            color: #333;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 16px;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+            margin: 8px;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .stat-label {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            background: var(--light);
+            border: none;
+            border-radius: 15px;
+            padding: 14px 20px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .form-section {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .form-section h2 {
+            margin: 0 0 20px 0;
+            text-align: center;
+            font-size: 1.6em;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1em;
+            color: #333;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--accent), #ee5a24);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        .courses-list {
+            margin-top: 20px;
+        }
+        .course-item {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .course-info {
+            flex: 1;
+            min-width: 150px;
+        }
+        .course-name {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .course-author {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .like-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3em;
+            transition: 0.3s;
+        }
+        .like-btn.liked {
+            background: #ff6b6b;
+            color: white;
+        }
+        .like-btn:hover {
+            transform: scale(1.1);
+        }
+        .likes-count {
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.7;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .stats, .actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat, .action-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            .course-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .course-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span class="cap">🎓</span>
+                Курсы Артема в уколе 😊
+            </h1>
+            <p>Подбери свой курс и построй карьеру, что прыгнет ввысь!</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="total-courses">0</div>
+                <div class="stat-label">ВСЕГО КУРСОВ</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="total-likes">0</div>
+                <div class="stat-label">ЛАЙКОВ</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="top-course">-</div>
+                <div class="stat-label">ТОП КУРС</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="action-btn" onclick="document.getElementById('course-input').focus()">
+                Добавить курс
+            </button>
+            <button class="action-btn" onclick="alert('Пока нет курсов 😅')">
+                Все курсы
+            </button>
+        </div>
+
+        <div class="form-section">
+            <h2>Прыгни в курс для Арта!</h2>
+            <form id="course-form">
+                <div class="form-group">
+                    <label>Курса</label>
+                    <input type="text" id="course-input" placeholder="Например: Арт-Арт" required>
+                </div>
+                <div class="form-group">
+                    <label>Твой ник</label>
+                    <input type="text" id="author-input" placeholder="Как тебя зовут?" required>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Добавить курс
+                </button>
+            </form>
+        </div>
+
+        <div class="courses-list" id="courses-list">
+            <div class="empty-state">Пока нет ни одного курса... Добавь первый!</div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('course-form');
+        const courseInput = document.getElementById('course-input');
+        const authorInput = document.getElementById('author-input');
+        const coursesList = document.getElementById('courses-list');
+        const totalCoursesEl = document.getElementById('total-courses');
+        const totalLikesEl = document.getElementById('total-likes');
+        const topCourseEl = document.getElementById('top-course');
+
+        let courses = JSON.parse(localStorage.getItem('artem-courses')) || [];
+
+        function saveCourses() {
+            localStorage.setItem('artem-courses', JSON.stringify(courses));
+            renderCourses();
+            updateStats();
+        }
+
+        function updateStats() {
+            const total = courses.length;
+            const likes = courses.reduce((sum, c) => sum + c.likes, 0);
+            const top = courses.reduce((prev, curr) => 
+                (!prev || curr.likes > prev.likes) ? curr : prev, null);
+
+            totalCoursesEl.textContent = total;
+            totalLikesEl.textContent = likes;
+            topCourseEl.textContent = top ? top.name : '-';
+        }
+
+        function renderCourses() {
+            if (courses.length === 0) {
+                coursesList.innerHTML = '<div class="empty-state">Пока нет ни одного курса... Добавь первый!</div>';
+                return;
+            }
+
+            coursesList.innerHTML = courses.map((course, index) => `
+                <div class="course-item">
+                    <div class="course-info">
+                        <div class="course-name">${course.name}</div>
+                        <div class="course-author">от ${course.author}</div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <button class="like-btn ${course.liked ? 'liked' : ''}" 
+                                onclick="toggleLike(${index})">
+                            ❤️
+                        </button>
+                        <span class="likes-count">${course.likes}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.toggleLike = function(index) {
+            courses[index].likes = courses[index].liked ? courses[index].likes - 1 : courses[index].likes + 1;
+            courses[index].liked = !courses[index].liked;
+            saveCourses();
+        };
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = courseInput.value.trim();
+            const author = authorInput.value.trim();
+
+            if (name && author) {
+                courses.push({
+                    name,
+                    author,
+                    likes: 0,
+                    liked: false
+                });
+                courseInput.value = '';
+                authorInput.value = '';
+                saveCourses();
+            }
+        });
+
+        // Инициализация
+        renderCourses();
+        updateStats();
+    </script>
+</body>
+</html>
